@@ -69,7 +69,7 @@ $(document).ready(function () {
     $('#email').keypress(function (e) {
         if (e.which == 13) {
             $('#password').focus();
-        }
+        } 
     });
 
     $('#password').keypress(function (e) {
@@ -82,7 +82,7 @@ $(document).ready(function () {
             var user_email = $('#email').val();
             var user_password = $('#password').val();
             var password_confirm = $('#passwordC').val();
-
+    
             if (user_password != password_confirm) {
                 M.toast({
                     html: 'La Confirmacion de la Contraseña es Incorrecta'
