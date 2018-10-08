@@ -27,23 +27,73 @@ $(document).ready(function () {
 
     $('#btnRegistrar').click(function () {
 
-        var user_email = $('#user_email').val();
-        var user_password = $('#user_password').val();
-        var password_confirm = $('#password_confirm').val();
+        var user_email = $('#email').val();
+        var user_password = $('#password').val();
+        var password_confirm = $('#passwordC').val();
 
         if (user_password != password_confirm) {
             M.toast({
                 html: 'La Confirmacion de la Contraseña es Incorrecta'
             });
         } else {
-            document.getElementById("user_email").value = ""
-            document.getElementById("user_password").value = ""
-            document.getElementById("password_confirm").value = ""
+            document.getElementById("email").value = ""
+            document.getElementById("password").value = ""
+            document.getElementById("passwordC").value = ""
             firebase.auth().createUserWithEmailAndPassword(user_email, user_password).then(Exitoso).catch(alFinalizar);
         }
     });
 
     $("#btnCancelar").click(function () {
         location.assign('index.html');
+    });
+});
+
+
+
+function exito() {
+    location.assign('inicio.html');
+};
+
+$(document).ready(function () {
+
+    $('#btnRegistrar').click(function () {
+        var user_email = $('#email').val();
+        var user_password = $('#password').val();
+        var password_confirm = $('#passwordC').val();
+
+
+        firebase.auth().signInWithEmailAndPassword(user_email, user_password, password_confirm).then(exito).catch(function (error) {
+            alert("Ingresa Datos " + error);
+        });
+    });
+    $('#email').keypress(function (e) {
+        if (e.which == 13) {
+            $('#password').focus();
+        }
+    });
+
+    $('#password').keypress(function (e) {
+        if (e.which == 13) {
+            $('#passwordC').focus();
+        }
+    });
+    $('#passwordC').keypress(function (e) {
+        if (e.which == 13) {
+            var user_email = $('#email').val();
+            var user_password = $('#password').val();
+            var password_confirm = $('#passwordC').val();
+
+            if (user_password != password_confirm) {
+                M.toast({
+                    html: 'La Confirmacion de la Contraseña es Incorrecta'
+                });
+            } else {
+                document.getElementById("email").value = ""
+                document.getElementById("password").value = ""
+                document.getElementById("passwordC").value = ""
+                firebase.auth().createUserWithEmailAndPassword(user_email, user_password).then(Exitoso).catch(alFinalizar);
+            }
+        }
+
     });
 });
