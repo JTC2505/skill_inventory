@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inventario Habilidades</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/Datos.css">
+    <script>
+        function check1(box) {
+        if (box.checked) {
+            document.getElementById("checkbox2").checked = false;
+            document.getElementById("checkbox1").disabled = true;
+            document.getElementById("checkbox2").disabled = false;
+            document.getElementById("user_sex").value="Masculino"
+        }
+    }
+    function check2(box) {
+        if (box.checked) {
+            document.getElementById("checkbox1").checked = false;
+            document.getElementById("checkbox2").disabled = true;
+            document.getElementById("checkbox1").disabled = false;
+            document.getElementById("user_sex").value="Femenino"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper" id="navblue"></div>
+    </nav>
+    <div class="container">
+        <center>
+            <p class="texto"><b>Bienvenido, es hora de completar tu perfil</b></p>
+        </center>
+        <div class="form-group">
+            <!-- <div>Sube una foto de perfil.</div>
+            <div class="image-upload">
+                <label for="imagen" id="imgcenter">
+                    <img src="images/images.png" class="imagenper" alt="Click aquí para subir tu foto" title="Click aquí para subir tu foto"
+                        id='previsualizacion'>
+                </label>
+
+                <input id="imagen" type='file' accept='image/*' onchange='openFile(event)'><br></div>
+            <!-- <div class="form-group">
+                    <label for="imagen">Elegir Imagen</label>
+                    <input type="file" id="imagen">
+                    <p class="help-block">Elija una imagen para este artículo</p>
+                    <img id="previsualizacion">
+                </div> -->
+            <!-- <div class="image-upload">
+                    <label for="file-input">
+                        <img src="images/images.png" class="imagenper" alt="Click aquí para subir tu foto" title="Click aquí para subir tu foto"
+                            id='output'>
+                    </label>
+
+                    <input id="file-input" type='file' accept='image/*' onchange='openFile(event)'><br></div> -->
+            <!-- <script>
+                var openFile = function (event) {
+                    $("#imagen").change(function () {
+                        var descriptor = new FileReader();
+                        descriptor.readAsDataURL(this.files[0]);
+
+                        descriptor.onloadend = function () {
+                            imagen = descriptor.result;
+                            $("#previsualizacion").attr("src", imagen);
+                        };
+                    });
+                }
+            </script>
+        </div> -->
+        <p>Nombres</p>
+        <input type="text" name="" id="user_name" placeholder="Nombre">
+        <p>Apelllidos</p>
+        <input type="text" name="" id="user_lastname" placeholder="Nombre">
+        <p>Sexo</p>
+        <input type="text" name="" id="user_sex" placeholder="sexo" class="sexo">
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox1" onclick="check1(this);" />
+            <span>Masculino</span>
+        </label>
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox2" onclick="check2(this);" />
+            <span>Femenino</span>
+        </label>
+        <p>Tel&eacute;fono</p>
+        <input type="text" name="" id="user_telephone" placeholder="telefono">
+
+        <a class="waves-effect waves-light btn" id="btnRegistrar">
+            <i class="material-icons left">person</i>Registrar
+        </a>
+
+
+    </div>
+
+
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="js/Datos.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAysL_w7tnCmtv-FJDkjPUMm9igdj5aYNw",
+        authDomain: "skill-inventory-pti.firebaseapp.com",
+        databaseURL: "https://skill-inventory-pti.firebaseio.com",
+        projectId: "skill-inventory-pti",
+        storageBucket: "skill-inventory-pti.appspot.com",
+        messagingSenderId: "893316064395"
+    };
+    firebase.initializeApp(config);
+</script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #00000073;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 0px 0px 0px 35px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #0d1eb8;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 35spx;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 50px;
+            }
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inventario Habilidades</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/inicio.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 65%;
+            max-width: 300px;
+        }
+
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            /* Black see-through */
+            color: #f1f1f1;
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0;
+            color: white;
+            font-size: 18px;
+            padding: 2px;
+            text-align: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+
+<body>
+    <div data-role="page" class="containerspinner">
+        <div class="spinner">
+            <div class="blue1"></div>
+            <div class="blue2"></div>
+            <div class="blue3"></div>
+            <div class="blue4"></div>
+        </div>
+    </div>
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <nav>
+
+                <div class="nav-wrapper" id="navblue">
+                    <span id="botonmovil" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+                    <script>
+                        function openNav() {
+                            document.getElementById("mySidenav").style.width = "275px";
+                        }
+
+                        function closeNav() {
+                            document.getElementById("mySidenav").style.width = "0";
+                        }
+                    </script>
+                    <a href="https://www.plus-ti.com/" id="navblue"><img id="logo" src="images/plus-it-1.png" id="navblue"></a>
+                    <ul class="right hide-on-med-and-down" id="navblue">
+                        <li><a href="">inicio</a></li>
+                        <li><a href="">servicios</a></li>
+                        <li><a href="">informacion</a></li>
+                        <li><a href="">cuenta</a></li>
+                    </ul>
+
+                    <div id="mySidenav" class="sidenav">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                        </head>
+
+
+
+                        <div class="container">
+                            <div id="datos"></div>
+                        </div>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="" botonloging>inicio</a>
+                        <a href="">servicios</a>
+                        <a href="">informacion</a>
+                        <a id="btnLogout">salir</a>
+                    </div>
+
+
+                </div>
+            </nav>
+        </div>
+        <!-- /header -->
+        <center>
+            <div id="container">
+
+                <p class="texto">Bienvenido, qu&eacute; deseas hacer?</p>
+                <br>
+            </div>
+            <br>
+            <!-- href="registro_hab.html" -->
+            <a class="btn" id="btninicio2">
+                <i class="material-icons left">person_add</i>Registrar tus habilidades
+            </a>
+            <a href="registros.html" class="btn" id="btninicio1">
+                <i class="material-icons left">recent_actors</i>Ver personas registradas
+            </a>
+
+        </center>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="js/inicio.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAysL_w7tnCmtv-FJDkjPUMm9igdj5aYNw",
+            authDomain: "skill-inventory-pti.firebaseapp.com",
+            databaseURL: "https://skill-inventory-pti.firebaseio.com",
+            projectId: "skill-inventory-pti",
+            storageBucket: "skill-inventory-pti.appspot.com",
+            messagingSenderId: "893316064395"
+        };
+        firebase.initializeApp(config);
+    </script>
+</body>
+</table>
+</div>
+<!-- /content -->
+</div>
+<!-- /page -->
+</body>
+
+</html>

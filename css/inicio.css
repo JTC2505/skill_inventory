@@ -1,0 +1,125 @@
+.texto {
+    font-size: 250%;
+}
+.image {
+    border-radius: 150px;
+    height: 100%;
+    width: 100%;
+    border: 6px solid #006600;
+    display: block;
+    margin-left: -17.5%;
+    background-size: cover;
+}
+
+#datos {
+    border-radius: 150px;
+    width: 150px;
+    height: 150px;
+}
+
+#btninicio2 {
+    margin: 20px;
+    background-color: #192c57;
+
+}
+
+#btninicio1 {
+    margin: 20px;
+    background-color: #192c57;
+}
+
+#btninicio2:hover {
+    background-color: #1f366b;
+
+}
+
+#btninicio1:hover {
+    background-color: #1f366b;
+}
+
+#navblue {
+    background-color: #192c57;
+}
+
+#container {
+    margin-top: 10%;
+}
+
+body {
+    margin-top: 15%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: white;
+}
+
+#logo {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 75px;
+    height: auto;
+}
+
+.datos {
+    width: 225px;
+    height: 225px;
+}
+
+#botonmovil {
+    display: none;
+}
+
+.datos img {
+    width: 75%;
+    height: auto;
+}
+
+@media only screen and (max-width: 450px) {
+    .texto {
+        font-size: 200%;
+    }
+    #btninicio2 {
+        margin: 10px;
+        display: inline-block;
+
+    }
+
+    #btninicio1 {
+        margin: 10px;
+        display: inline-block;
+    }
+
+    body {
+        margin-top: 20%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: white;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #botonmovil {
+        display: block;
+    }
+
+    .datos {
+        width: 90%;
+        height: auto;
+        margin-left: 50%;
+    }
+
+    .datos img {
+        width: 75%;
+        height: auto;
+    }
+}
+
+p {
+    margin-left: 5%;
+    margin-right: 5%;
+}

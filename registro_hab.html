@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de habilidades</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/registro_hab.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/registro_hab.js"></script>
+</head>
+
+<body>
+    <div data-role="page" class="containerspinner">
+        <div class="spinner">
+            <div class="blue1"></div>
+            <div class="blue2"></div>
+            <div class="blue3"></div>
+            <div class="blue4"></div>
+        </div>
+    </div>
+    <script>
+        function check1(box) {
+        if (box.checked) {
+            document.getElementById("checkbox2").checked = false;
+            document.getElementById("checkbox3").checked = false;
+            document.getElementById("checkbox1").disabled = true;
+            document.getElementById("checkbox2").disabled = false;
+            document.getElementById("checkbox3").disabled = false;
+            document.getElementById("user_relationship").value = "Simpre";
+        }
+    }
+
+    function check2(box) {
+        if (box.checked) {
+            document.getElementById("checkbox1").checked = false;
+            document.getElementById("checkbox3").checked = false;
+            document.getElementById("checkbox2").disabled = true;
+            document.getElementById("checkbox1").disabled = false;
+            document.getElementById("checkbox3").disabled = false;
+            document.getElementById("user_relationship").value = "A veces";
+        }
+    }
+    function check3(box) {
+        if (box.checked) {
+            document.getElementById("checkbox1").checked = false;
+            document.getElementById("checkbox2").checked = false;
+            document.getElementById("checkbox3").disabled = true;
+            document.getElementById("checkbox1").disabled = false;
+            document.getElementById("checkbox2").disabled = false;
+            document.getElementById("user_relationship").value = "Nunca";
+        }
+    }
+
+    function check4(box) {
+        if (box.checked) {
+            document.getElementById("checkbox5").checked = false;
+            document.getElementById("checkbox3").checked = false;
+            document.getElementById("checkbox4").disabled = true;
+            document.getElementById("checkbox5").disabled = false;
+            document.getElementById("checkbox3").disabled = false;
+            document.getElementById("user_teamwork").value = "Simpre";
+        }
+    }
+
+    function check5(box) {
+        if (box.checked) {
+            document.getElementById("checkbox4").checked = false;
+            document.getElementById("checkbox6").checked = false;
+            document.getElementById("checkbox5").disabled = true;
+            document.getElementById("checkbox4").disabled = false;
+            document.getElementById("checkbox6").disabled = false;
+            document.getElementById("user_teamwork").value = "A veces";
+        }
+    }
+    function check6(box) {
+        if (box.checked) {
+            document.getElementById("checkbox4").checked = false;
+            document.getElementById("checkbox5").checked = false;
+            document.getElementById("checkbox6").disabled = true;
+            document.getElementById("checkbox4").disabled = false;
+            document.getElementById("checkbox5").disabled = false;
+            document.getElementById("user_teamwork").value = "Nunca";
+        }
+    }
+    function check7(box) {
+        if (box.checked) {
+            document.getElementById("checkbox8").checked = false;
+            document.getElementById("checkbox7").disabled = true;
+            document.getElementById("checkbox8").disabled = false;
+            document.getElementById("user_leader").value = "Si";
+            document.getElementById("user_leadergroups").style.display = "inline-block";
+            document.getElementById("user_leaderpeoplegroups").style.display = "inline-block";
+            document.getElementById("user_leadergroups").disabled = false;
+            document.getElementById("user_leaderpeoplegroups").disabled = false;
+        }
+    }
+    function check8(box) {
+        if (box.checked) {
+            document.getElementById("checkbox7").checked = false;
+            document.getElementById("checkbox8").disabled = true;
+            document.getElementById("checkbox7").disabled = false;
+            document.getElementById("user_leader").value = "No";
+            document.getElementById("user_leadergroups").disabled = true;
+            document.getElementById("user_leaderpeoplegroups").disabled = true;
+        }
+    }
+    function check9(box) {
+        if (box.checked) {
+            document.getElementById("checkbox10").checked = false;
+            document.getElementById("checkbox9").disabled = true;
+            document.getElementById("checkbox10").disabled = false;
+            document.getElementById("ask1").style.display = "inline-block";
+            document.getElementById("user_skill1").style.display = "inline-block";
+            document.getElementById("ask1").disabled = false;
+            document.getElementById("user_skill1").disabled = false;
+        }
+    }
+    function check10(box) {
+        if (box.checked) {
+            document.getElementById("checkbox9").checked = false;
+            document.getElementById("checkbox10").disabled = true;
+            document.getElementById("checkbox9").disabled = false;
+            document.getElementById("ask1").disabled = true;
+            document.getElementById("user_skill1").disabled = true;
+        }
+    }
+</script>
+    <nav>
+        <div class="nav-wrapper" id="navblue"></div>
+    </nav>
+    <div class="container">
+        <p>En cu&aacute;l lenguaje de programaci&oacute;n te consideras bueno?</p>
+        <input id="ProgramLenguage1" type="text" placeholder="Lenguaje de programaci&oacute;n">
+        <p id="pProgramLenguage1">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer1">
+            <span id="demo1"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange1"></p>
+        </div>
+
+        <p id="pProgramLenguage2">Que otro lenguaje de programaci&oacute;n conoces</p>
+        <input id="ProgramLenguage2" type="text" placeholder="Otro lenguaje de programaci&oacute;n... ">
+        <p id="p2ProgramLenguage2">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer2">
+            <span id="demo2"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange2"></p>
+        </div>
+
+        <p id="pProgramLenguage3">Que otro lenguaje de programaci&oacute;n conoces</p>
+        <input id="ProgramLenguage3" type="text" placeholder="Otro lenguaje de programaci&oacute;n... ">
+        <p id="p2ProgramLenguage3">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer3">
+            <span id="demo3"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange3"></p>
+        </div>
+
+        <p id="pProgramLenguage4">Que otro lenguaje de programaci&oacute;n conoces</p>
+        <input id="ProgramLenguage4" type="text" placeholder="Otro lenguaje de programaci&oacute;n... ">
+        <p id="p2ProgramLenguage4">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer4">
+            <span id="demo4"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange4"></p>
+        </div>
+
+        <p id="pProgramLenguage5">Que otro lenguaje de programaci&oacute;n conoces</p>
+        <input id="ProgramLenguage5" type="text" placeholder="Otro lenguaje de programaci&oacute;n... ">
+        <p id="p2ProgramLenguage5">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer5">
+            <span id="demo5"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange5"></p>
+        </div>
+
+        <p id="pProgramLenguage6">Que otro lenguaje de programaci&oacute;n conoces</p>
+        <input id="ProgramLenguage6" type="text" placeholder="Otro lenguaje de programaci&oacute;n... ">
+        <p id="p2ProgramLenguage6">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer6">
+            <span id="demo6"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange6"></p>
+        </div>
+
+        <p id="pProgramLenguage7">Que otro lenguaje de programaci&oacute;n conoces</p>
+        <input id="ProgramLenguage7" type="text" placeholder="Otro lenguaje de programaci&oacute;n... ">
+        <p id="p2ProgramLenguage7">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer7">
+            <span id="demo7"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange7"></p>
+        </div>
+
+        <p id="pProgramLenguage8">Que otro lenguaje de programaci&oacute;n conoces</p>
+        <input id="ProgramLenguage8" type="text" placeholder="Otro lenguaje de programaci&oacute;n... ">
+        <p id="p2ProgramLenguage8">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer8">
+            <span id="demo8"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange8"></p>
+        </div>
+
+        <p id="pProgramLenguage9">Que otro lenguaje de programaci&oacute;n conoces</p>
+        <input id="ProgramLenguage9" type="text" placeholder="Otro lenguaje de programaci&oacute;n... ">
+        <p id="p2ProgramLenguage9">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer9">
+            <span id="demo9"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange9"></p>
+        </div>
+
+        <p id="pProgramLenguage10">Que otro lenguaje de programaci&oacute;n conoces</p>
+        <input id="ProgramLenguage10" type="text" placeholder="Otro lenguaje de programaci&oacute;n... ">
+        <p id="p2ProgramLenguage10">Nivel de conocimiento sobre este lenguaje</p>
+        <div id="slidecontainer10">
+            <span id="demo10"></span>
+            <p class="range-field">
+                <input type="range" min="0" max="100" value="50" class="slider" id="myRange10"></p>
+        </div>
+
+        <!-- <div id="newinputtext"></div> -->
+
+        <a class="waves-effect waves-light btn" id="newin2"><i class="material-icons left">add</i>A&ntilde;adir otro
+            lenguaje</a>
+        <a class="waves-effect waves-light btn" id="newin3"><i class="material-icons left">add</i>A&ntilde;adir otro
+            lenguaje</a>
+        <a class="waves-effect waves-light btn" id="newin4"><i class="material-icons left">add</i>A&ntilde;adir otro
+            lenguaje</a>
+        <a class="waves-effect waves-light btn" id="newin5"><i class="material-icons left">add</i>A&ntilde;adir otro
+            lenguaje</a>
+        <a class="waves-effect waves-light btn" id="newin6"><i class="material-icons left">add</i>A&ntilde;adir otro
+            lenguaje</a>
+        <a class="waves-effect waves-light btn" id="newin7"><i class="material-icons left">add</i>A&ntilde;adir otro
+            lenguaje</a>
+        <a class="waves-effect waves-light btn" id="newin8"><i class="material-icons left">add</i>A&ntilde;adir otro
+            lenguaje</a>
+        <a class="waves-effect waves-light btn" id="newin9"><i class="material-icons left">add</i>A&ntilde;adir otro
+            lenguaje</a>
+        <a class="waves-effect waves-light btn" id="newin10"><i class="material-icons left">add</i>A&ntilde;adir otro
+            lenguaje</a>
+
+
+        <p>Te relacionas bien con otras personas?</p>
+        <input type="text" name="" id="user_relationship" class="campooculto">
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox1" onclick="check1(this);" />
+            <span>Siempre</span>
+        </label>
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox2" onclick="check2(this);" />
+            <span>A veces</span>
+        </label>
+
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox3" onclick="check3(this);" />
+            <span>Nunca</span>
+        </label>
+
+        <p>Eres bueno trabajando en equipo?</p>
+        <input type="text" name="" id="user_teamwork" class="campooculto">
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox4" onclick="check4(this);" />
+            <span>Siempre</span>
+        </label>
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox5" onclick="check5(this);" />
+            <span>A veces</span>
+        </label>
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox6" onclick="check6(this);" />
+            <span>Nunca</span>
+        </label>
+
+        <p>Has liderado equipos alguna vez?</p>
+        <input type="text" name="" id="user_leader" placeholder="lider" class="campooculto">
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox7" onclick="check7(this);" />
+            <span>Si</span>
+        </label>
+        <label>
+            <input type="checkbox" class="filled-in" id="checkbox8" onclick="check8(this);" />
+            <span>No</span>
+        </label>
+        <input type="text" name="" id="user_leadergroups" placeholder="Cuantos equipos has liderado" class="campooculto">
+        <input type="text" name="" id="user_leaderpeoplegroups" placeholder="Cuantas personas has liderado aprox."
+            class="campooculto">
+
+        <p id="pskill1">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill1" type="text" placeholder="Escribe tu habilidad">
+
+        <p id="pskill2">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill2" type="text" placeholder="Escribe tu habilidad ">
+
+        <p id="pskill3">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill3" type="text" placeholder="Escribe tu habilidad ">
+
+        <p id="pskill4">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill4" type="text" placeholder="Escribe tu habilidad ">
+
+        <p id="pskill5">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill5" type="text" placeholder="Escribe tu habilidad ">
+
+        <p id="pskill6">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill6" type="text" placeholder="Escribe tu habilidad ">
+
+        <p id="pskill7">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill7" type="text" placeholder="Escribe tu habilidad ">
+
+        <p id="pskill8">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill8" type="text" placeholder="Escribe tu habilidad ">
+
+        <p id="pskill9">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill9" type="text" placeholder="Escribe tu habilidad ">
+
+        <p id="pskill10">Escribe tu habilidad(Sabes primero auxilios, sabes de mecanica, sabes de robotica, sabes de
+            mecatronica, sabes de jardinaria, sabes de cocina, etc.)</p>
+        <input id="skill10" type="text" placeholder="Escribe tu habilidad ">
+        <br>
+
+        <p id="newinput1">Tienes alguna otra habilidad? <br><a class="waves-effect waves-light btn" id="n1"><i class="material-icons left">add</i>Si
+                tengo</a> , No poseo alguna otra <a class="waves-effect waves-light btn" id="btnRegistrar1"><i class="material-icons left">near_me</i>Registrar
+                de una vez</a></p>
+        <p id="newinput2">Tienes alguna otra habilidad? <br><a class="waves-effect waves-light btn" id="n2"><i class="material-icons left">add</i>Si
+                tengo</a> , No poseo alguna otra <a class="waves-effect waves-light btn" id="btnRegistrar2"><i class="material-icons left">near_me</i>Registrar
+                de una vez</a></p>
+        <p id="newinput3">Tienes alguna otra habilidad? <br><a class="waves-effect waves-light btn" id="n3"><i class="material-icons left">add</i>Si
+                tengo</a> , No poseo alguna otra <a class="waves-effect waves-light btn" id="btnRegistrar3"><i class="material-icons left">near_me</i>Registrar
+                de una vez</a></p>
+        <p id="newinput4">Tienes alguna otra habilidad? <br><a class="waves-effect waves-light btn" id="n4"><i class="material-icons left">add</i>Si
+                tengo</a> , No poseo alguna otra <a class="waves-effect waves-light btn" id="btnRegistrar4"><i class="material-icons left">near_me</i>Registrar
+                de una vez</a></p>
+        <p id="newinput5">Tienes alguna otra habilidad? <br><a class="waves-effect waves-light btn" id="n5"><i class="material-icons left">add</i>Si
+                tengo</a> , No poseo alguna otra <a class="waves-effect waves-light btn" id="btnRegistrar5"><i class="material-icons left">near_me</i>Registrar
+                de una vez</a></p>
+        <p id="newinput6">Tienes alguna otra habilidad? <br><a class="waves-effect waves-light btn" id="n6"><i class="material-icons left">add</i>Si
+                tengo</a> , No poseo alguna otra <a class="waves-effect waves-light btn" id="btnRegistrar6"><i class="material-icons left">near_me</i>Registrar
+                de una vez</a></p>
+        <p id="newinput7">Tienes alguna otra habilidad? <br><a class="waves-effect waves-light btn" id="n7"><i class="material-icons left">add</i>Si
+                tengo</a> , No poseo alguna otra <a class="waves-effect waves-light btn" id="btnRegistrar7"><i class="material-icons left">near_me</i>Registrar
+                de una vez</a></p>
+        <p id="newinput8">Tienes alguna otra habilidad? <br><a class="waves-effect waves-light btn" id="n8"><i class="material-icons left">add</i>Si
+                tengo</a> , No poseo alguna otra <a class="waves-effect waves-light btn" id="btnRegistrar8"><i class="material-icons left">near_me</i>Registrar
+                de una vez</a></p>
+        <p id="newinput9">Tienes alguna otra habilidad? <br><a class="waves-effect waves-light btn" id="n9"><i class="material-icons left">add</i>Si
+                tengo</a> , No poseo alguna otra <a class="waves-effect waves-light btn" id="btnRegistrar9"><i class="material-icons left">near_me</i>Registrar
+                de una vez</a></p>
+        <p id="newinput10"><a class="waves-effect waves-light btn" id="btnRegistrar10"><i class="material-icons left">near_me</i>Registrarde
+                una vez</a></p>
+
+        <script>
+            $('#newin2').click(function () {
+                document.getElementById("pProgramLenguage2").style.display = "block";
+                document.getElementById("p2ProgramLenguage2").style.display = "block";
+                document.getElementById("ProgramLenguage2").style.display = "block";
+                document.getElementById("newin2").style.display = "none";
+                document.getElementById("newin3").style.display = "inline-block";
+                document.getElementById("slidecontainer2").style.display = "block";
+                // var newinput = document.createElement('input');
+                // newinput.id = "ProgramLenguage2";
+                // newinput.type = "text";
+                // newinput.placeholder = "Otro lenguaje de programacion... ";
+                // newinput.autocomplete="off"
+                // document.getElementById('newinputtext').appendChild(newinput);
+                // console.log('creado');
+            });
+            $('#newin3').click(function () {
+                document.getElementById("pProgramLenguage3").style.display = "block";
+                document.getElementById("p2ProgramLenguage3").style.display = "block";
+                document.getElementById("ProgramLenguage3").style.display = "block";
+                document.getElementById("newin3").style.display = "none";
+                document.getElementById("newin4").style.display = "inline-block";
+                document.getElementById("slidecontainer3").style.display = "block";
+            });
+            $('#newin4').click(function () {
+                document.getElementById("pProgramLenguage4").style.display = "block";
+                document.getElementById("p2ProgramLenguage4").style.display = "block";
+                document.getElementById("ProgramLenguage4").style.display = "block";
+                document.getElementById("newin4").style.display = "none";
+                document.getElementById("newin5").style.display = "inline-block";
+                document.getElementById("slidecontainer4").style.display = "block";
+            });
+            $('#newin5').click(function () {
+                document.getElementById("pProgramLenguage5").style.display = "block";
+                document.getElementById("p2ProgramLenguage5").style.display = "block";
+                document.getElementById("ProgramLenguage5").style.display = "block";
+                document.getElementById("newin5").style.display = "none";
+                document.getElementById("newin6").style.display = "inline-block";
+                document.getElementById("slidecontainer5").style.display = "block";
+            });
+            $('#newin6').click(function () {
+                document.getElementById("pProgramLenguage6").style.display = "block";
+                document.getElementById("p2ProgramLenguage6").style.display = "block";
+                document.getElementById("ProgramLenguage6").style.display = "block";
+                document.getElementById("newin6").style.display = "none";
+                document.getElementById("newin7").style.display = "inline-block";
+                document.getElementById("slidecontainer6").style.display = "block";
+            });
+            $('#newin7').click(function () {
+                document.getElementById("pProgramLenguage7").style.display = "block";
+                document.getElementById("p2ProgramLenguage7").style.display = "block";
+                document.getElementById("ProgramLenguage7").style.display = "block";
+                document.getElementById("newin7").style.display = "none";
+                document.getElementById("newin8").style.display = "inline-block";
+                document.getElementById("slidecontainer7").style.display = "block";
+            });
+            $('#newin8').click(function () {
+                document.getElementById("pProgramLenguage8").style.display = "block";
+                document.getElementById("p2ProgramLenguage8").style.display = "block";
+                document.getElementById("ProgramLenguage8").style.display = "block";
+                document.getElementById("newin8").style.display = "none";
+                document.getElementById("newin9").style.display = "inline-block";
+                document.getElementById("slidecontainer8").style.display = "block";
+            });
+            $('#newin9').click(function () {
+                document.getElementById("pProgramLenguage9").style.display = "block";
+                document.getElementById("p2ProgramLenguage9").style.display = "block";
+                document.getElementById("ProgramLenguage9").style.display = "block";
+                document.getElementById("newin9").style.display = "none";
+                document.getElementById("newin10").style.display = "inline-block";
+                document.getElementById("slidecontainer9").style.display = "block";
+            });
+            $('#newin10').click(function () {
+                document.getElementById("pProgramLenguage10").style.display = "block";
+                document.getElementById("p2ProgramLenguage10").style.display = "block";
+                document.getElementById("ProgramLenguage10").style.display = "block";
+                document.getElementById("newin10").style.display = "none";
+                document.getElementById("slidecontainer10").style.display = "block";
+            });
+
+            $('#n1').click(function () {
+                document.getElementById("skill1").style.display = "block";
+                document.getElementById("pskill1").style.display = "block";
+                document.getElementById("newinput1").style.display = "none";
+                document.getElementById("newinput2").style.display = "inline-block";
+            });
+            $('#n2').click(function () {
+                document.getElementById("skill2").style.display = "block";
+                document.getElementById("pskill2").style.display = "block";
+                document.getElementById("newinput2").style.display = "none";
+                document.getElementById("newinput3").style.display = "inline-block";
+            });
+            $('#n3').click(function () {
+                document.getElementById("skill3").style.display = "block";
+                document.getElementById("pskill3").style.display = "block";
+                document.getElementById("newinput3").style.display = "none";
+                document.getElementById("newinput4").style.display = "inline-block";
+            });
+            $('#n4').click(function () {
+                document.getElementById("skill4").style.display = "block";
+                document.getElementById("pskill4").style.display = "block";
+                document.getElementById("newinput4").style.display = "none";
+                document.getElementById("newinput5").style.display = "inline-block";
+            });
+            $('#n5').click(function () {
+                document.getElementById("skill5").style.display = "block";
+                document.getElementById("pskill5").style.display = "block";
+                document.getElementById("newinput5").style.display = "none";
+                document.getElementById("newinput6").style.display = "inline-block";
+            });
+            $('#n6').click(function () {
+                document.getElementById("skill6").style.display = "block";
+                document.getElementById("pskill6").style.display = "block";
+                document.getElementById("newinput6").style.display = "none";
+                document.getElementById("newinput7").style.display = "inline-block";
+            });
+            $('#n7').click(function () {
+                document.getElementById("skill7").style.display = "block";
+                document.getElementById("pskill7").style.display = "block";
+                document.getElementById("newinput7").style.display = "none";
+                document.getElementById("newinput8").style.display = "inline-block";
+            });
+            $('#n8').click(function () {
+                document.getElementById("skill8").style.display = "block";
+                document.getElementById("pskill8").style.display = "block";
+                document.getElementById("newinput8").style.display = "none";
+                document.getElementById("newinput9").style.display = "inline-block";
+            });
+            $('#n9').click(function () {
+                document.getElementById("skill9").style.display = "block";
+                document.getElementById("pskill9").style.display = "block";
+                document.getElementById("newinput9").style.display = "none";
+                document.getElementById("newinput10").style.display = "inline-block";
+            });
+            $('#n10').click(function () {
+                document.getElementById("skill10").style.display = "block";
+                document.getElementById("pskill10").style.display = "block";
+                document.getElementById("newinput10").style.display = "none";
+                document.getElementById("btnRegistrar").style.display = "inline-block";
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAysL_w7tnCmtv-FJDkjPUMm9igdj5aYNw",
+                authDomain: "skill-inventory-pti.firebaseapp.com",
+                databaseURL: "https://skill-inventory-pti.firebaseio.com",
+                projectId: "skill-inventory-pti",
+                storageBucket: "skill-inventory-pti.appspot.com",
+                messagingSenderId: "893316064395"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script>
+            var choices = [
+                'A+', 'A-0', 'ABAP', 'ABC', 'ActionScript', 'Actor', 'Ada', 'Agda', 'ALGAE', 'ALGOL', 'Alma-0',
+                'Altair BASIC', 'Amiga E', 'AMOS BASIC', 'AMPL', 'ANS Forth', 'ANSI Common Lisp', 'APL',
+                'Apple Microsoft BASIC', 'AppleScript', 'Applesoft BASIC', 'APT', 'ARC Assembly', 'ARITH-MATIC',
+                'AspectJ', 'Atlas Autocode', 'AWK', 'B', 'BACAIC ', 'Ballerina',
+                'Bash', 'BASIC FOUR', 'BASIC', 'BBC BASIC', 'BCPL', 'Birkbeck Assembler', 'BLISS',
+                'Blue', 'Boehm unnamed coding system', 'Boo', 'Borland Delphi', 'Borland Pascal',
+                'Bourne Shell (sh)', 'Brainfuck', 'C shell', 'C with classes', 'C#', 'C', 'C++', 'CBASIC',
+                'CerberusX', 'Ceylon', 'Chapel',
+                'Claire', 'Clarion', 'Clascal', 'Clean', 'CLIPPER', 'Clojure', 'CLU',
+                'COBOL', 'Cobra', 'CoffeeScript', 'ColdFusion (CFML)', 'COMAL', 'COMIT',
+                'Commodore BASIC', 'Common Lisp', 'Compiler DescriptionLanguage (CDL)',
+                'Component Pascal', 'COMPOOL', 'COMTRAN', 'CORAL66', 'CorVision', 'COWSEL',
+                'CPC Coding scheme', 'CPL', 'Crystal', 'CS-4', 'cuneiform', 'Curl',
+                'Curry notation system', 'D', 'Dafny', 'DarkBasic', 'Dart', 'DIBOL-8', 'Draco',
+                'Dylan', 'E', 'ECMAScript', 'Edinburgh IMP', 'Editing Generator', 'Eiffel',
+                'Elixir', 'Elm', 'ENIAC coding system', 'ENIAC Short Code', 'Erlang', 'Euclid',
+                'EuLisp', 'Euphoria', 'EXAPT', 'F#', 'FACT', 'Factor', 'Falcon', 'Fantom',
+                'FLOW-MATIC', 'Forth', 'Fortran', 'Fortress', 'FP', 'FreeBASIC',
+                'Freiburger Code', 'F-Script', 'Game Maker Language (GML)', 'GDScript (GDS)',
+                'Genie', 'GEORGE', 'GFA BASIC', 'Glennie Autocode', 'GNU E', 'Go',
+                'GOM – Good Old Mad', 'Gosu', 'GRASS', 'Groovy', 'GW-BASIC', 'Hack', 'HAL/S',
+                'Hamilton C shell', 'Harbour', 'Haskell', 'Haxe', 'HyperTalk', 'IBM BASICA',
+                'IBM RPG', 'Icon', 'IDL', 'Idris', 'IITRAN',
+                'Informix-4GL', 'Integer BASIC', 'INTERCAL', 'InterLisp',
+                'Intermediate Programming Language', 'Io', 'IPL I', 'IPL II', 'IPL V',
+                'Irvine Dataflow (implementation)', 'Irvine Dataflow', 'ISLISP', 'ISWIM', 'IT', 'J',
+                'Jacquard Loom', 'Java', 'JavaScript', 'Join Java', 'JOSS I', 'JOSS II', 'JOVIAL',
+                'Joy', 'julia', 'K', 'Klammerausdrücke', 'Korn Shell (ksh)', 'Kotlin', 'KRL',
+                'LabVIEW', 'Laning and Zierler system', 'Lasso', 'Links', 'LIS', 'LISP',
+                'Little b', 'LiveCode Transcript', 'LiveScript', 'LOGO', 'Logtalk', 'LOLCODE',
+                'LPC', 'Lua', 'M2001',
+                'MAD – Michigan Algorithm Decode', 'MAD/I', 'Magik (programming language)',
+                'MAPPER', 'Mark I Autocode', 'Mark-IV', 'Mathematica (Wolfram Language)',
+                'MATH-MATIC', 'MATLAB', 'MATRIX MATH', 'Mercury', 'Mesa', 'MIMIC', 'Miranda', 'ML',
+                'Modula', 'Modula-2', 'Modula-3', 'MonkeyX', 'MUMPS', 'Nemerle', 'NetRexx',
+                'NewtonScript', 'Nim', 'Oberon', 'Oberon-07', 'Oberon-2', 'Object Oberon',
+                'Object Pasca', 'Object REXX', 'Objective-C', 'OCaml', 'occam', 'Octave',
+                'OMNIBAC Symbolic Assembler', 'Opa', 'OPL', 'OptimJ', 'Oxygene', 'Oz', 'P',
+                'P4', 'PACT I', 'PARADOX', 'Parasail', 'Pascal', 'Perl 6',
+                'Perl Data Language (PDL)', 'Perl', 'PHP', 'Pico', 'Pike', 'Pikt', 'PILOT', 'PL/I',
+                'PL/I', 'PL/M', 'Plankalkül', 'PlayBasic', 'Plus', 'Polymorphic Programming Language (PPL)',
+                'POP-1', 'POP-2',
+                'PostScript', 'PowerBASIC', 'PRINT', 'Processing', 'Prolog', 'PROMAL',
+                'PROSE modeling language Time-Sharing Version', 'PROSE modeling language', 'Pure',
+                'PureBasic', 'Python (programming language)', 'Python', 'Q', 'QB64', 'QuickBASIC',
+                'R', 'Racket', 'RAPID', 'RAPT', 'Ratfor', 'READ/PRINT', 'REBOL', 'Red',
+                'Redcode', 'REFAL', 'Regional Assembly Language', 'REXX', 'Ring',
+                'Rochester assembler', 'RPG', 'RPG/400', 'RPL', 'Ruby', 'Rust', 'S', 'SAM76', 'SAS', 'Scala',
+                'Scheme', 'Scratch', 'Seed7', 'Self',
+                'Sequentielle Formelübersetzung', 'SETL', 'Short Code', 'Simula 67', 'Simula',
+                'S-Lang', 'SMALL', 'Smalltalk', 'SNOBOL',
+                'Sort Merge Generator', 'Space Programming Language', 'SPARK', 'Speakeasy',
+                'Speedcoding', 'SpiderBasic', 'Squeak Smalltalk',
+                'Squirrel', 'Standard C++', 'Standard ML', 'Standard MUMPS', 'Stanislaus',
+                'STOS BASIC', 'Structured Query language (SQL)', 'Subtext', 'Sue', 'Superplan',
+                'Swift (parallel scripting language)', 'Swift', 'Tcl', 'Tea', 'TELCOMP', 'TRAC',
+                'TRAC', 'True BASIC', 'TTM', 'Turbo Basic', 'Turbo Pascal',
+                'Turing', 'TUTOR', 'TypeScript', 'UNICODE', 'UnrealScript', 'Vala', 'VBScript',
+                'VisiCalc', 'VisSim', 'Visual Basic .NET', 'Visual Basic',
+                'Von Neumann and Goldstine graphing system', 'Vulcan dBase-II', 'Whiley',
+                'Whirlwind assembler', 'Windows PowerShell', 'XPL', 'XSLT (+ XPath)', 'Yellow',
+                'Z Shell (zsh)', 'ZPL'
+            ];
+            var demo1 = new autoComplete({
+                selector: '#ProgramLenguage1',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo2 = new autoComplete({
+                selector: '#ProgramLenguage2',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo3 = new autoComplete({
+                selector: '#ProgramLenguage3',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo4 = new autoComplete({
+                selector: '#ProgramLenguage4',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo5 = new autoComplete({
+                selector: '#ProgramLenguage5',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo6 = new autoComplete({
+                selector: '#ProgramLenguage6',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo7 = new autoComplete({
+                selector: '#ProgramLenguage7',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo8 = new autoComplete({
+                selector: '#ProgramLenguage8',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo9 = new autoComplete({
+                selector: '#ProgramLenguage9',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo10 = new autoComplete({
+                selector: '#ProgramLenguage10',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                }
+            });
+        </script>
+        <script>
+            var slider1 = document.getElementById("myRange1");
+            var output1 = document.getElementById("demo1");
+            output1.innerHTML = slider1.value + "%";
+
+            slider1.oninput = function () {
+                output1.innerHTML = this.value + "%";
+            }
+            var slider2 = document.getElementById("myRange2");
+            var output2 = document.getElementById("demo2");
+            output2.innerHTML = slider2.value + "%";
+
+            slider2.oninput = function () {
+                output2.innerHTML = this.value + "%";
+            }
+            var slider3 = document.getElementById("myRange3");
+            var output3 = document.getElementById("demo3");
+            output3.innerHTML = slider3.value + "%";
+
+            slider3.oninput = function () {
+                output3.innerHTML = this.value + "%";
+            }
+            var slider4 = document.getElementById("myRange4");
+            var output4 = document.getElementById("demo4");
+            output4.innerHTML = slider4.value + "%";
+
+            slider4.oninput = function () {
+                output4.innerHTML = this.value + "%";
+            }
+            var slider5 = document.getElementById("myRange5");
+            var output5 = document.getElementById("demo5");
+            output5.innerHTML = slider5.value + "%";
+
+            slider5.oninput = function () {
+                output5.innerHTML = this.value + "%";
+            }
+            var slider6 = document.getElementById("myRange6");
+            var output6 = document.getElementById("demo6");
+            output6.innerHTML = slider6.value + "%";
+
+            slider6.oninput = function () {
+                output6.innerHTML = this.value + "%";
+            }
+            var slider7 = document.getElementById("myRange7");
+            var output7 = document.getElementById("demo7");
+            output7.innerHTML = slider7.value + "%";
+
+            slider7.oninput = function () {
+                output7.innerHTML = this.value + "%";
+            }
+            var slider8 = document.getElementById("myRange8");
+            var output8 = document.getElementById("demo8");
+            output8.innerHTML = slider8.value + "%";
+
+            slider8.oninput = function () {
+                output8.innerHTML = this.value + "%";
+            }
+            var slider9 = document.getElementById("myRange9");
+            var output9 = document.getElementById("demo9");
+            output9.innerHTML = slider9.value + "%";
+
+            slider9.oninput = function () {
+                output9.innerHTML = this.value + "%";
+            }
+            var slider10 = document.getElementById("myRange10");
+            var output10 = document.getElementById("demo10");
+            output10.innerHTML = slider10.value + "%";
+
+            slider10.oninput = function () {
+                output10.innerHTML = this.value + "%";
+            }
+        </script>
+        <script>
+            var choiceshab = [
+                'Abogado/a', 'Actor / Actriz.', 'Agente de viajes', 'Albañil.', 'Ama de casa', 'Arqueólogo',
+                'Arquitecto', 'Asesor, consultor', ' Astronauta', 'Azafata (avión)', 'Bailarín/a',
+                'Bibliotecario/a',
+                'Biólogo/a', 'Bombero', 'Cajero/a', 'Camarero/a ', 'Camionero/a ', 'Cantante', 'Carnicero/a',
+                'Carpintero/a', 'Cartero', 'Cartero ', 'Cazador', 'Científico', 'Cirujano', 'Cocinero', 'Cocinero',
+                'Conductor/a ', 'Conserje', 'Consultor', 'Contable', 'Cura', 'Decorador', 'Dentista', 'deportista',
+                'Diseñador/a', 'Economista', 'Electricista', 'Empresario/a', 'Enfermero/a.', 'Escritor',
+                'Farmaceútico',
+                'Físico', 'Florista', 'Fontanero', 'Fotógrafo', 'Frutero', 'Granjero, agricultor', 'Ingeniero/a',
+                'Investigador', 'Jardinero/a', 'Joyero/a', 'Juez', 'Limpiacristales',
+                'Limpiador, mujer de la limpieza',
+                'Marinero/a', 'Mecánico/a.', 'Médico/a.', 'Meteorólogo', 'Minero/a', 'Modelo', 'Modista', 'Monja',
+                'Monje', 'Niñera', 'Oficinista', ' Panadero', 'Pastelero, repostero', 'Payaso', 'Peluquero/a',
+                'Periodista', 'Pescador', 'Pintor', 'Policía', 'Político', 'Portero, conserje', 'Profesor/a',
+                'Psicólogo/a', 'Psiquiatra', 'Químico, farmaceútico', 'Recepcionista', 'Secretario', 'Socorrista',
+                'Taxista', 'Telefonista', 'Trabajador social', 'Vendedor', 'Veterinario', 'Veterinario ',
+                'Zapatero'
+            ];
+            var demo11 = new autoComplete({
+                selector: '#skill1',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo12 = new autoComplete({
+                selector: '#skill2',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo13 = new autoComplete({
+                selector: '#skill3',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo14 = new autoComplete({
+                selector: '#skill4',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo15 = new autoComplete({
+                selector: '#skill5',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo16 = new autoComplete({
+                selector: '#skill6',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo17 = new autoComplete({
+                selector: '#skill7',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo18 = new autoComplete({
+                selector: '#skill8',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo19 = new autoComplete({
+                selector: '#skill9',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+            var demo20 = new autoComplete({
+                selector: '#skill10',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var suggestions = [];
+                    for (i = 0; i < choiceshab.length; i++)
+                        if (~choiceshab[i].toLowerCase().indexOf(term)) suggestions.push(choiceshab[i]);
+                    suggest(suggestions);
+                }
+            });
+        </script>
+</body>
+
+</html>

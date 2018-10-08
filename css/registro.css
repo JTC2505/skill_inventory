@@ -1,0 +1,37 @@
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 2px solid #192c57;
+}
+
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 2px solid #192c57;
+}
+.container {
+    margin-top: 8%;
+}
+@media only screen and (max-width: 450px) {
+    .container {
+        margin-top: 15%;
+    }
+   .btn {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-bottom: 10%;
+    }
+}
+#btnRegistrar {
+    background-color: #192c57
+}
+
+#btnRegistrar:hover {
+    background-color: #2563f1
+}
+label{
+    margin-right: 3%;
+}
+.sexo{
+    display: none;
+} 
+
+#navblue {
+    background-color: #192c57;
+}
