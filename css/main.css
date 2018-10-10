@@ -4,22 +4,47 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
 input[type=password]:not(.browser-default):focus:not([readonly]) {
     border-bottom: 2px solid #192c57;
 }
-.container {
-    margin-top: 8%;
-}
 label {
     float: right;
     text-align: right;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (min-width: 401px) and (max-width: 4000px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 50px;
+    }
     .container {
-        margin-top: 15%;
+        margin-top: 8%;
+    }
+    .logo {
+        margin-top: 7.5px;
+        margin-left: 25px;
+        width: 10%;
+        height: auto;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+    .container {
+        margin-top: 25%;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 1280px;
+            width: 90%;
     }
     label {
         float: right;
         text-align: right;
         width: 50%;
+        height: auto;
+    }
+    .logo {
+        margin-top: 6px;
+        margin-left: 12px;
+        width: 35%;
         height: auto;
     }
 }
@@ -68,16 +93,6 @@ body {
     right: 25px;
     font-size: 35spx;
     margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 50px;
-    }
 }
 
 #navblue {

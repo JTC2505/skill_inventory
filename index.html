@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
@@ -12,18 +12,22 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/materialize.css">
 </head>
 
 <body>
     <nav>
-        <div class="nav-wrapper" id="navblue"></div>
+        <div class="nav-wrapper"  id="navblue">
+        <a href="https://www.plus-ti.com/"><img class="logo" src="images/3ec653_6489d4647bfa42368da7e7232ecd80dd_mv2_d_15362_5499_s_3.webp"></a>
+        </div>
     </nav>
+
     <div class="container">
         <h2 class="center-align">Ingresar</h2>
         <p>Correo electronico</p>
-        <input type="text" name="" id="user_email" placeholder="e-mail">
+        <input type="text" name="" id="email" placeholder="e-mail">
         <p>Contraseña</p>
-        <input type="password" name="" id="user_password" placeholder="password">
+        <input type="password" name="" id="password" placeholder="password">
         <a class="waves-effect waves-light btn" id="botonLogin">Ingresar</a>
         <label> No tienes una cuenta?<a href="registro.html"> crea una</a> | <a href="">Olvide mi contrase&ntilde;a</a></label>
     </div>
@@ -38,6 +42,7 @@
         crossorigin="anonymous"></script>
 
     <script src="js/main.js"></script>
+    <script src="js/materialize.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
     <script>

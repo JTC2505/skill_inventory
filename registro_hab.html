@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -17,14 +17,59 @@
 </head>
 
 <body>
-    <div data-role="page" class="containerspinner">
-        <div class="spinner">
-            <div class="blue1"></div>
-            <div class="blue2"></div>
-            <div class="blue3"></div>
-            <div class="blue4"></div>
+    <header>
+        <div data-role="page" class="containerspinner">
+            <div class="spinner">
+                <div class="blue1"></div>
+                <div class="blue2"></div>
+                <div class="blue3"></div>
+                <div class="blue4"></div>
+            </div>
         </div>
-    </div>
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <nav>
+
+                    <div class="nav-wrapper" id="navblue">
+                        <span id="botonmovil" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+                        <script>
+                            function openNav() {
+                                document.getElementById("mySidenav").style.width = "275px";
+                            }
+
+                            function closeNav() {
+                                document.getElementById("mySidenav").style.width = "0";
+                            }
+                        </script>
+                        <a href="https://www.plus-ti.com/"><img class="logo" src="images/3ec653_6489d4647bfa42368da7e7232ecd80dd_mv2_d_15362_5499_s_3.webp"></a>
+                        <ul class="right hide-on-med-and-down" id="navblue">
+
+                            <li><a id="btnLogout">salir</a></li>
+                        </ul>
+
+                        <div id="mySidenav" class="sidenav">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+                            <div class="container">
+                                <div id="datos"></div>
+                            </div>
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a href="" botonloging>inicio</a>
+                            <a href="">servicios</a>
+                            <a href="">informacion</a>
+                            <a id="btnLogout">salir</a>
+                        </div>
+
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
     <script>
         function check1(box) {
         if (box.checked) {
@@ -132,9 +177,6 @@
         }
     }
 </script>
-    <nav>
-        <div class="nav-wrapper" id="navblue"></div>
-    </nav>
     <div class="container">
         <p>En cu&aacute;l lenguaje de programaci&oacute;n te consideras bueno?</p>
         <input id="ProgramLenguage1" type="text" placeholder="Lenguaje de programaci&oacute;n">
@@ -578,7 +620,7 @@
                 'Sort Merge Generator', 'Space Programming Language', 'SPARK', 'Speakeasy',
                 'Speedcoding', 'SpiderBasic', 'Squeak Smalltalk',
                 'Squirrel', 'Standard C++', 'Standard ML', 'Standard MUMPS', 'Stanislaus',
-                'STOS BASIC', 'Structured Query language (SQL)', 'Subtext', 'Sue', 'Superplan',
+                'STOS BASIC', 'SQL', 'Subtext', 'Sue', 'Superplan',
                 'Swift (parallel scripting language)', 'Swift', 'Tcl', 'Tea', 'TELCOMP', 'TRAC',
                 'TRAC', 'True BASIC', 'TTM', 'Turbo Basic', 'Turbo Pascal',
                 'Turing', 'TUTOR', 'TypeScript', 'UNICODE', 'UnrealScript', 'Vala', 'VBScript',

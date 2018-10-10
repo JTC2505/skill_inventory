@@ -16,7 +16,7 @@ $(document).ready(function () {
 ``
                 $(UserLog).appendTo('#datos');
                 console.log('Conetado');
-                $(btnLogout).click(desconectar);
+                $('#btnLogout').click(desconectar);
             });
         } else {
             console.log('Usuario No Logeado');

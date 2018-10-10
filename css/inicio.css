@@ -74,11 +74,54 @@ body {
     width: 75%;
     height: auto;
 }
+@media only screen and (min-width: 401px) and (max-width: 4000px) {
+    .sidenav {
+        padding-top: 15px;
+    }
 
-@media only screen and (max-width: 450px) {
+    .sidenav a {
+        font-size: 50px;
+    }
+
+    .container {
+        margin-top: 8%;
+    }
+
+    .logo {
+        margin-top: 7.5px;
+        margin-left: 25px;
+        width: 10%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+    .container {
+        margin-top: 25%;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1280px;
+        width: 90%;
+    }
+
+    label {
+        float: right;
+        text-align: right;
+        width: 50%;
+        height: auto;
+    }
+
+    .logo {
+        margin-top: -50px;
+        margin-right: 12px;
+        width: 35%;
+        height: auto;
+        float: right;
+    }
     .texto {
         font-size: 200%;
     }
+
     #btninicio2 {
         margin: 10px;
         display: inline-block;
@@ -104,6 +147,7 @@ body {
     }
 
     #botonmovil {
+        width: 50%;
         display: block;
     }
 

@@ -1,3 +1,79 @@
+@media only screen and (min-width: 401px) and (max-width: 4000px) {
+    .logo {
+        margin-top: 7.5px;
+        margin-left: 25px;
+        width: 10%;
+        height: auto;
+    }
+
+    #botonmovil {
+        display: none;
+    }
+
+    #containerbarrabusqueda {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        background: #fafafa;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    #ElemetSearch {
+        width: 75%;
+    }
+    #btnBuscar{
+        background-color: #192c57;
+        border-color: #192c57;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+    .logo {
+        margin-top: -50px;
+        margin-right: 12px;
+        width: 35%;
+        height: auto;
+        float: right;
+    }
+
+    #botonmovil {
+        display: block;
+        width: 50%;
+    }
+    #containerbarrabusqueda {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        background: #fafafa;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    #ElemetSearch {
+        width: 70%;
+    }
+
+    #btnBuscar {
+        background-color: #192c57;
+        border-color: #192c57;
+    }
+    #listado {
+        display: block;
+        cursor: pointer;
+        height: auto;
+        line-height: 3rem;
+        padding: 1rem;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+    .collapsible.popout {
+        width: 340px;
+        margin-left: -19px;
+    }
+    #negrita{
+        margin-left: 25px;
+    }
+}
+
 .nav-wrapper {
     background-color: #192c57;
 
@@ -77,14 +153,22 @@ div.scrollmenu button:hover {
     border-top: none;
 }
 
-#cuadro1:focus{
+#cuadro1:focus {
     border-color: black;
 }
+
 #cuadro1:active {
     border-color: black;
 }
 
-#tablas{
+#tablas {
     margin-left: 5%;
     width: 90%;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 2px solid #192c57;
+}
+
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 2px solid #192c57;
 }
